@@ -5,6 +5,7 @@
   --с-cards-light: #e7e9fc;
   --c-paragraphs: #434455;
   --c-borders:#8E8F99;
+  --c-modal-background: #FCFCFC;
 }
 
 /* Base */
@@ -511,4 +512,141 @@ background-color: var(--c-primary);
 
 .footer-socials-icon {
   fill: var(--c-background-light)
+}
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(46, 47, 66, 0.40);
+  padding: 80px;
+}
+
+.is-open {
+
+}
+
+.modal {
+  position: relative;
+  background-color: var(--c-modal-background);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 408px;
+  height: 100%;
+  max-height: 584px;
+  overflow-y: auto;
+  padding: 72px 24px 24px 24px;
+}
+
+.modal-close {
+  display: block;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.modal-close-icon {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  border-radius: 50%;
+  background-color: var(--с-cards-light);
+  fill: var(--c-background-dark);
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--c-background-dark);
+  margin-bottom: 16px;
+}
+
+.modal-field {
+  margin-bottom: 8px;
+}
+
+.modal-labels {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--c-borders);
+  margin-bottom: 4px;
+}
+
+.modal-input-wrap {
+  position: relative;
+}
+
+.modal-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--c-background-dark);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input {
+  width: 100%;
+  border: 1px solid rgba(46, 47, 66, 0.40);
+  border-radius: 4px;
+  background-color: #FCFCFC;
+  padding: 8px 16px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+  outline: none;
+  border-color: #4D5AE5;
+}
+
+.modal-input:focus + .modal-input-icon {
+  fill: #4D5AE5;
+}
+
+.modal-textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid rgba(46, 47, 66, 0.40);
+  border-radius: 4px;
+  background-color: #FCFCFC;
+  padding: 8px 16px;
+  resize: none;
+}
+
+.modal-button {
+  display: block;
+  color: var(--c-primary);
+  background-color: #4d5ae5;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 16px 32px;
+  margin: 0 auto;
+  min-width: 169px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:hover {
+  background-color: #404bbf;
+}
+
+.modal-button:focus {
+  background-color: #404bbf;
 }
